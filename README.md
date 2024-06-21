@@ -125,12 +125,20 @@ On the testing code I added a threshold of 5 labels over a 1-minute time span, i
 
  ![image](https://github.com/DoronzoNicholas/Violence-detection-using-Artificial-Intelligence/assets/123806307/000896d3-e759-40f0-9c9f-fd07f15a7d6a)
  ![image](https://github.com/DoronzoNicholas/Violence-detection-using-Artificial-Intelligence/assets/123806307/c87279d2-6cf8-4ca9-8cc0-6b816a270100)
+
+
+
  
 **Sliding Frame Model:**
 
 ![image](https://github.com/DoronzoNicholas/Violence-detection-using-Artificial-Intelligence/assets/123806307/fb0a5f14-3d9c-4c98-b3e8-5f089370c3f3)
 
 ![image](https://github.com/DoronzoNicholas/Violence-detection-using-Artificial-Intelligence/assets/123806307/813cb219-b68c-4b70-8f3c-340107c110b3)
+
+![slidingframe](https://github.com/DoronzoNicholas/Violence-detection-Using-Artificial-Intelligence-CCN-LSTM/assets/123806307/f5a484d6-6ddf-4eb4-bbe3-e59e7dba7e09)
+
+
+
 
 # Limitation and Further Development
 <div align="justify">
