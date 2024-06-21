@@ -58,6 +58,7 @@ The LSTM output shape will be formed by the number of batches along with the num
 Before transferring to the last layers of the model we will convert this 2D tensor into 1D tensor. This is done with the “Flatten” layer. We will use the “Flatten” layer so that we can further process our data into the “Dense” layers. 
 The “Dense” layers are fully connected layers and are responsible to further processing the data until the last layer where we will have just the 2 number of neurons referring to the number of classes we have for our task; This layer is where our prediction will be given. In this instance we have a binary classification for the detection of violence or non-violence category. 
 Before the training part, I used some optimizers and parameters and then fit the model with my training and validation dataset.</div>
+
 ![image](https://github.com/DoronzoNicholas/Violence-detection-using-Artificial-Intelligence/assets/123806307/1105fdd6-1baa-49fa-99c2-e45bc1db14d4)
 
 ![image](https://github.com/DoronzoNicholas/Violence-detection-using-Artificial-Intelligence/assets/123806307/134948a6-8332-4315-ab07-827d67abeb8f)
@@ -89,17 +90,22 @@ The approach used in the updated confusion matrix will consist in the same appro
 ![image](https://github.com/DoronzoNicholas/Violence-detection-using-Artificial-Intelligence/assets/123806307/5172a33f-6fec-4193-9a0f-34db7a03bdb4)
 
 I undertake a confusion matrix for both the model trained with the “VideoFrameGenerator” method and the model trained with the SlidingFrameGenerator”.
+
 **VideoFrame Model:**
+
 ![image](https://github.com/DoronzoNicholas/Violence-detection-using-Artificial-Intelligence/assets/123806307/c445299a-9f49-4d25-bdc5-ee700a0580be)
 
 ![image](https://github.com/DoronzoNicholas/Violence-detection-using-Artificial-Intelligence/assets/123806307/1c158f43-8764-4e26-befd-dcd8f01331f1)
 
 
 I afterwards tested the second model, trained with the slidingFrame method. I produced the confusion matrix and the classification report
---SlidingFrame Model:**
+
+**SlidingFrame Model:**
+
 ![image](https://github.com/DoronzoNicholas/Violence-detection-using-Artificial-Intelligence/assets/123806307/2159d96a-22d7-4d78-ac06-04b17095d8b0)
 
 ![image](https://github.com/DoronzoNicholas/Violence-detection-using-Artificial-Intelligence/assets/123806307/e472f02a-5bd0-4940-bdc8-ce049923a244)
+
  <div align="justify">
 We can denote that there were more occurrences where the model would predict a non-violent situation as violent. After viewing some video files, I noticed that slidingFrame is more sensible in producing violent label compared to the VideoFrame. Therefore, this difference gave the worst result during a non-violence situation, where a more saddle episode would produce a violent label, and better results in triggering a violent label.
 We can say that the overall performance of the 2 models is not far apart and that I twitch on each specific model with a more suitable label count would compensate the additional sensitivity of the “slidingframe”. 
@@ -107,17 +113,21 @@ After we confirmed the effectiveness of the models, we can now test them on real
 For the non-violent episodes I opt for a live view from one of the cameras placed in London which can be found online. </div>
 
 **Live video footage link:**
+
 [EarthCam - Abbey Road Cam](https://www.earthcam.com/world/england/london/abbeyroad/?cam=abbeyroad_uk)
+
 <div align="justify">
 For the violent CCTV footage, I used the dataset used for the testing mentioned before.
 The testing will be performed in the following order. I will play the live view camera for some time and then switch directly to a violent scene so that I can determine the responsiveness and the overall performance. 
 On the testing code I added a threshold of 5 labels over a 1-minute time span, if the label count is more than 5 then an alarm will be triggered. The label count will be refreshed if a trigger is reached or 1 minute is passed.  </div>
 
 **Video Frame Model:**
+
  ![image](https://github.com/DoronzoNicholas/Violence-detection-using-Artificial-Intelligence/assets/123806307/000896d3-e759-40f0-9c9f-fd07f15a7d6a)
  ![image](https://github.com/DoronzoNicholas/Violence-detection-using-Artificial-Intelligence/assets/123806307/c87279d2-6cf8-4ca9-8cc0-6b816a270100)
  
 **Sliding Frame Model:**
+
 ![image](https://github.com/DoronzoNicholas/Violence-detection-using-Artificial-Intelligence/assets/123806307/fb0a5f14-3d9c-4c98-b3e8-5f089370c3f3)
 
 ![image](https://github.com/DoronzoNicholas/Violence-detection-using-Artificial-Intelligence/assets/123806307/813cb219-b68c-4b70-8f3c-340107c110b3)
